@@ -65,6 +65,37 @@
       body.light-mode .navbar a {
         color: var(--black);
       }
+
+      #mainNavbar {
+        background-color: var(--black);
+        transition: all 0.3s ease;
+        z-index: 999;
+        min-height: 80px;
+      }
+      #mainNavbar .navbar-brand {
+        color: var(--purple);
+        font-weight: 600;
+        font-size: 1.3rem;
+      }
+      .nav-item .icon,
+      .nav-item .text-link {
+        color: var(--purple);
+        font-weight: bold;
+        text-decoration: none;
+        transition: color 0.2s ease, transform 0.2s ease;
+        display: inline-block;
+      }
+      .nav-item {
+        margin-right: 1rem;
+      }
+      .icon {
+        margin-right: 0.3rem;
+      }
+      .nav-item .icon:hover,
+      .nav-item .text-link:hover {
+        color: #d19fe4;
+        transform: scale(1.1);
+      }
     </style>
   </head>
   <body>
