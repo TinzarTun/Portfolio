@@ -311,6 +311,16 @@
         color: red;
         margin: 0 5px;
       }
+      /* Scroll Fade-in Animation */
+      .fade-in-section {
+        opacity: 0;
+        transform: translateY(50px);
+        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+      }
+      .fade-in-section.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
     </style>
   </head>
   <body>
