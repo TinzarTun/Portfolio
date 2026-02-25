@@ -65,7 +65,7 @@
       body.light-mode .navbar a {
         color: var(--black);
       }
-
+      /* Navbar */
       #mainNavbar {
         background-color: var(--black);
         transition: all 0.3s ease;
@@ -203,6 +203,26 @@
         box-shadow:
           0 8px 20px rgba(128, 0, 128, 0.35),
           0 0 15px rgba(128, 0, 128, 0.6);
+      }
+      /* Connect Section */
+      #connect h2 {
+        margin-bottom: 20px;
+      }
+      body:not(.light-mode) #connect h2 {
+        color: #fff;
+      }
+      body.light-mode #connect h2 {
+        color: #000;
+      }
+      #connect i {
+        font-size: 2rem;
+        margin: 0 10px;
+        color: var(--purple);
+        transition: transform 0.2s ease;
+        cursor: pointer;
+      }
+      #connect i:hover {
+        transform: scale(1.2);
       }
       /* Footer */
       footer {
