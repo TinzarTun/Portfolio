@@ -513,6 +513,24 @@
           ? '<i class="fas fa-moon"></i>'
           : '<i class="fas fa-sun"></i>';
       });
+      // Scroll Fade-in Animation using Intersection Observer
+      const faders = document.querySelectorAll(".fade-in-section");
+      const appearOptions = {
+        threshold: 0.1, // trigger when 10% of element visible
+        rootMargin: "0px 0px -50px 0px",
+      };
+      const appearOnScroll = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible"); // Fade-IN
+          } else {
+            entry.target.classList.remove("visible"); // Fade-OUT
+          }
+        });
+      }, appearOptions);
+      faders.forEach((fader) => {
+        appearOnScroll.observe(fader);
+      });
     </script>
   </body>
 </html>
