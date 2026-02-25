@@ -113,6 +113,38 @@
       body.light-mode #mainNavbar .icon {
         color: var(--purple);
       }
+      /*Responsive Navbar Fix*/
+      /* Tablet & Mobile */
+      @media (max-width: 991px) {
+        #mainNavbar {
+          padding: 10px 0;
+        }
+        /* Center menu items */
+        #navbarNav {
+          text-align: center;
+        }
+        .navbar-nav {
+          margin-top: 15px;
+        }
+        /* Stack items cleanly */
+        .nav-item {
+          margin: 10px 0;
+          justify-content: center;
+        }
+        /* Hide icons on small screens */
+        .nav-item .icon {
+          display: none;
+        }
+        /* Bigger, tappable links */
+        .nav-link {
+          font-size: 1.1rem;
+          padding: 10px 0;
+        }
+        /* Dark mode toggle spacing */
+        .dark-mode-toggle {
+          margin-top: 15px;
+        }
+      }
     </style>
   </head>
   <body>
