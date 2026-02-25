@@ -204,6 +204,24 @@
           0 8px 20px rgba(128, 0, 128, 0.35),
           0 0 15px rgba(128, 0, 128, 0.6);
       }
+      /* Skills Section */
+      #skills .skill-badge {
+        display: inline-block;
+        margin: 10px;
+        padding: 10px 15px;
+        border-radius: 50px;
+        background-color: var(--purple);
+        color: #fff;
+        font-weight: 600;
+        transition: transform 0.2s ease;
+      }
+      #skills .skill-badge:hover {
+        transform: scale(1.1);
+      }
+      body.light-mode #skills .skill-badge {
+        background-color: var(--purple);
+        color: #fff;
+      }
       /* Connect Section */
       #connect h2 {
         margin-bottom: 20px;
