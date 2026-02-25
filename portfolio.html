@@ -82,7 +82,9 @@
         color: var(--purple);
         font-weight: bold;
         text-decoration: none;
-        transition: color 0.2s ease, transform 0.2s ease;
+        transition:
+          color 0.2s ease,
+          transform 0.2s ease;
         display: inline-block;
       }
       .nav-item {
@@ -152,6 +154,26 @@
         border-radius: 50%;
         object-fit: cover;
         margin-bottom: 20px;
+      }
+      #home h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+      }
+      #home p.subtitle {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+      }
+      #home p.skills {
+        font-size: 1rem;
+        margin-bottom: 20px;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.8;
+      }
+      #home p.skills .highlight {
+        color: var(--purple);
+        font-weight: 600;
       }
     </style>
   </head>
