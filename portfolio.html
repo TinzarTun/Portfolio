@@ -19,6 +19,34 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
+
+    <style>
+      body, .navbar, .nav-link, .navbar-brand {
+        font-family: 'Poppins', sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      :root {
+        --purple: #9b59b6;
+        --white: #ffffff;
+        --black: #000000;
+      }
+      body {
+        background-color: var(--black);
+        color: var(--white);
+        transition: all 0.3s ease;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+      }
+      a, .highlight {
+        color: var(--purple);
+      }
+      section {
+        padding: 80px 20px;
+      }
+    </style>
   </head>
   <body>
     <!-- Navbar -->
