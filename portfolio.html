@@ -175,6 +175,35 @@
         color: var(--purple);
         font-weight: 600;
       }
+      #home .btn-cv {
+        background-color: var(--purple);
+        color: var(--white);
+        border: none;
+        padding: 10px 20px;
+        font-weight: 600;
+        border-radius: 5px;
+        text-decoration: none;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+      #home .btn-cv:hover {
+        background-color: var(--purple);
+        color: var(--white);
+        transform: translateY(-3px);
+        box-shadow:
+          0 8px 20px rgba(128, 0, 128, 0.35),
+          0 0 15px rgba(128, 0, 128, 0.6);
+      }
+      #home .btn-cv:active {
+        transform: translateY(-3px);
+        box-shadow:
+          0 8px 20px rgba(128, 0, 128, 0.35),
+          0 0 15px rgba(128, 0, 128, 0.6);
+      }
     </style>
   </head>
   <body>
