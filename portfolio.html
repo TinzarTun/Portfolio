@@ -315,7 +315,9 @@
       .fade-in-section {
         opacity: 0;
         transform: translateY(50px);
-        transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        transition:
+          opacity 0.8s ease-out,
+          transform 0.8s ease-out;
       }
       .fade-in-section.visible {
         opacity: 1;
@@ -388,24 +390,21 @@
     <!-- Home Section -->
     <section id="home">
       <div class="fade-in-section">
-        <img
-          src="image/profile.jpg"
-          alt="Profile Picture"
-          class="profile"
-        />
+        <img src="image/profile.jpg" alt="Profile Picture" class="profile" />
         <h1>Hi, I'm Tinzar Tun</h1>
         <p class="subtitle">
           Junior Developer |
           <span class="highlight">Learning & Building Projects</span>
         </p>
         <p class="skills">
-          I design and develop full-stack web applications using
+          I design and build scalable full-stack web applications using
           <span class="highlight"
-            >Java, Go, React, Angular JS and .NET Framework</span
+            >React, Node.js, Express, PHP, and Laravel,</span
           >
-          with a strong focus on performance, maintainability, and clean
-          architecture. My backend systems are powered by SQL Server,
-          PostgreSQL, Redis and built to scale.
+          emphasizing clean architecture, RESTful API development, and efficient
+          database design. My backend solutions integrate MongoDB, MySQL,
+          Microsoft SQL Server (MSSQL), and PostgreSQL to ensure secure and
+          high-performance systems.
         </p>
         <a href="TinzarTun_CV.pdf" download class="btn-cv">
           <i class="fas fa-download"></i> Download CV
