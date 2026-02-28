@@ -21,6 +21,39 @@
     />
 </head>
 <body>
-    
+    <!-- MDBootstrap JS -->
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.4.0/mdb.min.js"
+    ></script>
+
+    <script>
+      // Dark/Light Mode Toggle
+      const toggle = document.getElementById("darkModeToggle");
+      toggle.addEventListener("click", () => {
+        document.body.classList.toggle("light-mode");
+        toggle.innerHTML = document.body.classList.contains("light-mode")
+          ? '<i class="fas fa-moon"></i>'
+          : '<i class="fas fa-sun"></i>';
+      });
+      // Scroll Fade-in Animation using Intersection Observer
+      const faders = document.querySelectorAll(".fade-in-section");
+      const appearOptions = {
+        threshold: 0.1, // trigger when 10% of element visible
+        rootMargin: "0px 0px -50px 0px",
+      };
+      const appearOnScroll = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible"); // Fade-IN
+          } else {
+            entry.target.classList.remove("visible"); // Fade-OUT
+          }
+        });
+      }, appearOptions);
+      faders.forEach((fader) => {
+        appearOnScroll.observe(fader);
+      });
+    </script>
 </body>
 </html>
