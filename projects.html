@@ -297,7 +297,7 @@
         <div class="container">
           <div class="row justify-content-center">
             <!-- Project 1 -->
-            <div class="col-md-6 col-lg-4 mb-4">
+            <div class="col-md-6 col-lg-4 mb-4 project-card-wrapper">
               <div class="project-card h-100">
                 <h5>Bus Ticket System</h5>
                 <p>
@@ -315,7 +315,10 @@
             </div>
 
             <!-- Project 2 -->
-            <div class="col-md-6 col-lg-4 mb-4">
+            <div
+              class="col-md-6 col-lg-4 mb-4 project-card-wrapper"
+              data-status="in-progress"
+            >
               <div class="project-card h-100">
                 <h5>Lost & Found System</h5>
                 <p>
@@ -333,7 +336,7 @@
             </div>
 
             <!-- Project 3 -->
-            <div class="col-md-6 col-lg-4 mb-4">
+            <div class="col-md-6 col-lg-4 mb-4 project-card-wrapper">
               <div class="project-card h-100">
                 <h5>E-Commerce System</h5>
                 <p>
@@ -391,6 +394,26 @@
       }, appearOptions);
       faders.forEach((fader) => {
         appearOnScroll.observe(fader);
+      });
+      // Project Filter
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const projects = document.querySelectorAll(".project-card-wrapper");
+
+      filterBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          filterBtns.forEach((b) => b.classList.remove("active"));
+          btn.classList.add("active");
+
+          const status = btn.getAttribute("data-status");
+
+          projects.forEach((p) => {
+            if (status === "all" || p.getAttribute("data-status") === status) {
+              p.style.display = "block";
+            } else {
+              p.style.display = "none";
+            }
+          });
+        });
       });
     </script>
   </body>
