@@ -297,7 +297,10 @@
         <div class="container">
           <div class="row justify-content-center">
             <!-- Project 1 -->
-            <div class="col-md-6 col-lg-4 mb-4 project-card-wrapper">
+            <div
+              class="col-md-6 col-lg-4 mb-4 project-card-wrapper"
+              data-status="finished"
+            >
               <div class="project-card h-100">
                 <h5>Bus Ticket System</h5>
                 <p>
@@ -336,7 +339,10 @@
             </div>
 
             <!-- Project 3 -->
-            <div class="col-md-6 col-lg-4 mb-4 project-card-wrapper">
+            <div
+              class="col-md-6 col-lg-4 mb-4 project-card-wrapper"
+              data-status="finished"
+            >
               <div class="project-card h-100">
                 <h5>E-Commerce System</h5>
                 <p>
@@ -405,14 +411,33 @@
           btn.classList.add("active");
 
           const status = btn.getAttribute("data-status");
+          let anyVisible = false;
 
           projects.forEach((p) => {
             if (status === "all" || p.getAttribute("data-status") === status) {
               p.style.display = "block";
+              anyVisible = true;
             } else {
               p.style.display = "none";
             }
           });
+
+          // Show message if nothing matches
+          const container = document.querySelector("#projects .row");
+          let msg = document.querySelector("#noProjectsMsg");
+          if (!anyVisible) {
+            if (!msg) {
+              msg = document.createElement("p");
+              msg.id = "noProjectsMsg";
+              msg.style.color = "var(--purple)";
+              msg.style.fontWeight = "600";
+              msg.style.marginTop = "20px";
+              msg.textContent = "No projects found for this filter.";
+              container.appendChild(msg);
+            }
+          } else if (msg) {
+            msg.remove();
+          }
         });
       });
     </script>
