@@ -175,7 +175,6 @@
         flex-wrap: wrap;
         gap: 10px;
       }
-
       .filter-btn {
         background-color: var(--black);
         color: var(--purple);
@@ -186,32 +185,69 @@
         cursor: pointer;
         transition: all 0.3s ease;
       }
-
       .filter-btn:hover {
         background-color: var(--purple);
         color: var(--white);
         transform: scale(1.05);
       }
-
       .filter-btn.active {
         background-color: var(--purple);
         color: var(--white);
         box-shadow: 0 5px 15px rgba(128, 0, 128, 0.4);
       }
-
       /* Light Mode */
       body.light-mode .filter-btn {
         background-color: var(--white);
         color: var(--purple);
         border: 2px solid var(--purple);
       }
-
       body.light-mode .filter-btn:hover,
       body.light-mode .filter-btn.active {
         background-color: var(--purple);
         color: var(--white);
       }
-    /* Connect Section */
+      /* Get In Touch Section */
+      #contact {
+        padding: 100px 20px;
+      }
+      #contact .contact-container {
+        max-width: 600px;
+        margin: 0 auto;
+      }
+      #contact p {
+        font-size: 1.05rem;
+        line-height: 1.8;
+        margin-bottom: 30px;
+      }
+      /* Button Style */
+      .contact-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 10px 28px;
+        border-radius: 50px;
+        border: 2px solid var(--purple);
+        color: var(--purple);
+        font-weight: 600;
+        text-decoration: none;
+        transition: all 0.3s ease;
+      }
+      .contact-btn:hover {
+        background-color: var(--purple);
+        color: #fff;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(155, 89, 182, 0.35);
+      }
+      /* Light mode */
+      body.light-mode .contact-btn {
+        border: 2px solid var(--purple);
+        color: var(--purple);
+      }
+      body.light-mode .contact-btn:hover {
+        background-color: var(--purple);
+        color: #fff;
+      }
+      /* Connect Section */
       #connect h2 {
         margin-bottom: 20px;
       }
@@ -392,14 +428,14 @@
         <h2 class="highlight mb-4">Get In Touch</h2>
 
         <p>
-          I'm currently open to new 
+          I'm currently open to new
           <span class="highlight">opportunities and collaborations.</span>
-          Whether you have a project in mind, a question, or just want to say hello —
-          my inbox is always open.
+          Whether you have a project in mind, a question, or just want to say
+          hello — my inbox is always open.
           <span class="highlight">I'll try my best to get back to you!</span>
         </p>
 
-        <a href="mailto:tinzartun2002@email.com" class="contact-btn">
+        <a href="mailto:tinzartun2002@gail.com" class="contact-btn">
           <i class="fas fa-envelope"></i> Send Email
         </a>
       </div>
@@ -410,7 +446,10 @@
       <div class="fade-in-section">
         <h2 class="highlight mb-4">Feel free to connect with me</h2>
         <div class="social-icons">
-          <a href="https://www.linkedin.com/in/tinzar-tun-416a13229/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/tinzar-tun-416a13229/"
+            target="_blank"
+          >
             <i class="fab fa-linkedin-in"></i>
           </a>
 
